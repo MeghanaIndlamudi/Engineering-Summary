@@ -3,5 +3,5 @@ A collection of concise, high-quality summaries of technical articles and engine
 
 ---
 
-## Storing 200 Billion Entities: Notion’s Data Lake Project
+## [Storing 200 Billion Entities: Notion’s Data Lake Project](articles/Storing-200-Billion-Entities-Notion-Data-Lake.md)
 This article explores how Notion scaled its data infrastructure to manage over 200 billion entities efficiently, covering the challenges, tech stack, and solutions involved.  
