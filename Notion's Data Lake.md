@@ -57,4 +57,4 @@ Notion’s data lake project showcases the power of a modern data stack in handl
 
 ---
 
-For further details on Notion’s data infrastructure and design choices, please refer to the official [Notion engineering blog](https://www.notion.so/blog).
+For further details on Notion’s data infrastructure and design choices, please refer to the official [blog](h[ttps://www.notion.so/blog](https://blog.bytebytego.com/p/storing-200-billion-entities-notions)).
