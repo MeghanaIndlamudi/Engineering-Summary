@@ -1,12 +1,9 @@
 # Storing 200 Billion Entities: Notion’s Data Lake Project
 
-This project documents the architectural evolution of Notion’s data infrastructure as it scaled from 20 billion blocks in 2021 to over 200 billion blocks by 2024. The increased data volume led Notion to re-architect its data storage and processing solutions to handle hundreds of terabytes efficiently while supporting new product features and analytics requirements.
+This project documents the architectural evolution of Notion’s data infrastructure as it scaled from 20 billion blocks in 2021 to over 200 billion blocks by 2024. The increased data volume led Notion to re-architect its data storage and processing solutions to handle hundreds of terabytes efficiently while supporting new product features and analytics requirements. To handle this growth, Notion scaled its infrastructure with sharded Postgres database alongside Fivetran and Snowflake for data processing.. Initially, 480 logical shards were distributed across 32 Postgres instances, later expanded to 96 instances. However, managing the 480 Fivetran connectors for ELT (Extract, Load, Transform) proved challenging, and Snowflake, optimized for insert-heavy data, struggled with Notion’s update-heavy workload.
 
-## Project Overview
 
-Notion’s original data architecture used a sharded Postgres database alongside Fivetran and Snowflake for data processing.
-
-However, the rapid growth and update-heavy nature of Notion’s data posed several challenges:
+## Initial Architecture Challenges
 
 - **Operational Difficulty**: Managing 480 Fivetran connectors to handle sharded data was complex and time-consuming.
 - **Speed and Cost Inefficiency**: Snowflake was slow and costly for Notion's update-heavy workload.
@@ -19,15 +16,15 @@ To address these issues, Notion developed an in-house data lake using a modern t
 The new architecture, implemented using AWS S3 and Apache Hudi, incorporates the following key components:
 
 - **AWS S3**: Used as the primary storage layer for both raw and processed data.
-- **Kafka**: Handles real-time data ingestion via Debezium CDC connectors to stream incremental changes from Postgres to the data lake.
+- **Kafka**: Handles real-time data ingestion via Debezium CDC(Change Data Capture) connectors to stream incremental changes from Postgres to the data lake.
 - **Apache Hudi**: Optimized for update-heavy workloads, Hudi is used to process and store data in S3 with UPSERT and COPY_ON_WRITE features.
 - **Apache Spark**: Employed for distributed data processing and denormalization, with PySpark for lighter tasks and Scala Spark for intensive computations like tree traversal.
+- **Debezium**: Captures changes in Postgres tables, streaming these as Kafka topics, which simplifies topic management and ensures consistent replication into Hudi tables in S3.
 
-### Data Ingestion and Processing Pipeline
+### Data Ingestion and Processing Pipeline (Key Design Decisions)
 
-1. **Change Data Capture (CDC)**: Debezium captures incremental changes in Postgres and streams them to Kafka topics, where each table is assigned a topic.
-2. **Incremental Ingestion**: Kafka messages are consumed by Apache Hudi, which ingests only updated data, maintaining data freshness while minimizing cost and system load.
-3. **Post-Processing**: Raw data is stored in S3 as a single source of truth. Transformation, denormalization, and permission data construction (e.g., tree traversal) are performed in Spark before saving processed data for analytics and reporting.
+1. **Incremental Ingestion**: Kafka messages are consumed by Apache Hudi, which ingests only updated data, maintaining data freshness while minimizing cost and system load. Updates are continuously streamed from Kafka to S3 via Hudi, keeping the data lake up-to-date.
+2. **Post-Processing**: Raw data is first ingested into S3 to create a single source of truth, simplifying debugging. Post-processing tasks, such as transformation, denormalization, and permission data construction (e.g., tree traversal) are performed in Spark before saving processed data for analytics and reporting.
 
 ## Key Optimizations
 
