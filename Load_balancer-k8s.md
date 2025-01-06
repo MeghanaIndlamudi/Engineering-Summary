@@ -3,6 +3,8 @@
 ## What is a Load Balancer?
 A load balancer is a device or software application that distributes network or application traffic across multiple servers. 
 
+![image](https://github.com/user-attachments/assets/2280cf5d-3188-41d5-a6fc-2621bd71d219)
+
 ### Key Functions of a Load Balancer:
 1. **Distributes Traffic**: Ensures even traffic distribution among servers.
 2. **Ensures Availability and Reliability**: Maintains application uptime.
@@ -21,7 +23,7 @@ A load balancer is a device or software application that distributes network or 
 
 ## Kubernetes Design Patterns
 Kubernetes (k8s) design patterns are architectural solutions for building, deploying, and managing containerized applications in Kubernetes.
-
+![image](https://github.com/user-attachments/assets/131b2f64-3753-4de6-9e5e-d29cb7f08a90)
 ### Foundational Patterns:
 1. **Health Probe Pattern**: Ensures every container implements observable APIs for management.
 2. **Predictable Demands Pattern**: Requires declaring application requirements and resource profiles.
