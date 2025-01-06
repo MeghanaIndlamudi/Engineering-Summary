@@ -9,3 +9,6 @@ This article explores how Notion scaled its data infrastructure to manage over 2
 This article explores basics about Apache Kafka.
 ## [API Architectural Styles](API-Architectural-Styles.md)
 This article provides a detailed overview of some of the most popular API architectural styles.
+
+## [Load Balancers](Load_balancer-k8s.md)
+This article provides an overview of load balancers and Kubernetes design patterns, explaining their key functionalities, types, and use cases to design scalable and reliable applications.
