@@ -15,3 +15,6 @@ This article provides an overview of load balancers and Kubernetes design patter
 
 ## [Asynchronous tasks with FastAPI and Celery](Asynchronous-tasks-with-fastapi-and-celery.md)
 This article explains how to integrate Celery with FastAPI for managing asynchronous background tasks efficiently.
+
+## [Asynchronous Programming in Python](Asynchronous-programming-in-python.md.md)
+The article explains how asynchronous programming and concurrency, combined with parallelism, can enhance the efficiency and scalability of web applications and computational tasks, with FastAPI serving as a powerful tool for both.
