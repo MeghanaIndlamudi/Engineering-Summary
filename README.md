@@ -12,3 +12,6 @@ This article provides a detailed overview of some of the most popular API archit
 
 ## [Load Balancers](Load_balancer-k8s.md)
 This article provides an overview of load balancers and Kubernetes design patterns, explaining their key functionalities, types, and use cases to design scalable and reliable applications.
+
+## [Asynchronous tasks with FastAPI and Celery](Asynchronous-tasks-with-fastapi-and-celery.md)
+This article explains how to integrate Celery with FastAPI for managing asynchronous background tasks efficiently.
