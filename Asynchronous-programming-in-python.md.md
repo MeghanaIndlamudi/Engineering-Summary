@@ -1,7 +1,5 @@
 # Asynchronous Programming in Python
 
-This repository contains notes and examples on **Asynchronous Programming in Python**, with a focus on **async** and **await** keywords, and their application in frameworks like **FastAPI**. The goal of these notes is to explain the fundamentals and benefits of asynchronous programming, provide real-life analogies, and demonstrate how Python handles asynchronous tasks using coroutines.
-
 ## Key Concepts
 
 ### 1. Asynchronous Code
