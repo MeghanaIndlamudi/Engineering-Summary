@@ -19,6 +19,7 @@ A load balancer is a device or software application that distributes network or 
 5. **Layer 7 Load Balancers (Application Layer)**: Operate at OSI Layer 7, making decisions based on application-level data.
 6. **Global Server Load Balancing (GSLB)**: Distributes traffic across multiple geographical locations to improve redundancy and global performance.
 
+### [Load Balancer Algorithms Explained with code](https://blog.algomaster.io/p/load-balancing-algorithms-explained-with-code)
 ---
 
 ## Kubernetes Design Patterns
