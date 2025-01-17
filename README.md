@@ -18,3 +18,6 @@ This article explains how to integrate Celery with FastAPI for managing asynchro
 
 ## [Asynchronous Programming in Python](Asynchronous-programming-in-python.md.md)
 The article explains how asynchronous programming and concurrency, combined with parallelism, can enhance the efficiency and scalability of web applications and computational tasks, with FastAPI serving as a powerful tool for both.
+
+## [Redis Use Cases](Redis-Use-Cases.md)
+Exploring Redis as a versatile, high-performance tool for building scalable and efficient applications.
