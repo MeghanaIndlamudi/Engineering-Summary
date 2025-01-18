@@ -9,15 +9,13 @@ This article explores how Notion scaled its data infrastructure to manage over 2
 This article explores basics about Apache Kafka.
 ## [API Architectural Styles](API-Architectural-Styles.md)
 This article provides a detailed overview of some of the most popular API architectural styles.
-
+## [API Gateway](API-Gateway.md)
+The article provides a comprehensive overview of API Gateways, including their significance in modern application architectures, key features, and how they function.
 ## [Load Balancers](Load_balancer-k8s.md)
 This article provides an overview of load balancers and Kubernetes design patterns, explaining their key functionalities, types, and use cases to design scalable and reliable applications.
-
 ## [Asynchronous tasks with FastAPI and Celery](Asynchronous-tasks-with-fastapi-and-celery.md)
 This article explains how to integrate Celery with FastAPI for managing asynchronous background tasks efficiently.
-
 ## [Asynchronous Programming in Python](Asynchronous-programming-in-python.md.md)
 The article explains how asynchronous programming and concurrency, combined with parallelism, can enhance the efficiency and scalability of web applications and computational tasks, with FastAPI serving as a powerful tool for both.
-
 ## [Redis Use Cases](Redis-Use-Cases.md)
 Exploring Redis as a versatile, high-performance tool for building scalable and efficient applications.
