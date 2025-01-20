@@ -7,6 +7,8 @@ A collection of concise, high-quality summaries of technical articles and engine
 This article explores how Notion scaled its data infrastructure to manage over 200 billion entities efficiently, covering the challenges, tech stack, and solutions involved.  
 ## [Apache Kafka: Architecture, Components, and Real-World Use Cases](Apache-Kafka-Basics.md)
 This article explores basics about Apache Kafka.
+## [Dependency Injection and Inversion of Control](Dependency-Injection-and-IOC.md)
+This article provides a comprehensive overview of Inversion of Control (IoC) and Dependency Injection (DI) concepts, with practical examples of implementing these patterns using the Spring Framework to build modular, scalable, and testable applications.
 ## [API Architectural Styles](API-Architectural-Styles.md)
 This article provides a detailed overview of some of the most popular API architectural styles.
 ## [API Gateway](API-Gateway.md)
