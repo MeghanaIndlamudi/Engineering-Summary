@@ -67,7 +67,7 @@ The build stage compiles code into an executable format. Tools like **Maven**, *
 - Build artifacts are stored for later use in deployment.
 
 #### **Artifact Creation and Storage**
-- Artifacts (e.g., JAR files, Docker images) are stored in repositories like **JFrog Artifactory** or **AWS S3**.
+- Artifacts (e.g., JAR files, Docker images) are stored(for deployment) in repositories like **JFrog Artifactory** or **AWS S3**.
 - These artifacts are versioned and can be deployed to any environment.
 
 ---
@@ -96,11 +96,7 @@ The build stage compiles code into an executable format. Tools like **Maven**, *
 
 ---
 
-### Stage 4. **Artifact Management**
-   - Build outputs (e.g., JAR files, Docker images) are stored for deployment.
-   - Tools like JFrog Artifactory or AWS S3 manage these artifacts.
-
-### **Stage 5: Deployment**
+### **Stage 4: Deployment**
 
 #### **Deployment Environments**
 - **Development**: Used for initial testing and debugging.
@@ -119,7 +115,7 @@ The build stage compiles code into an executable format. Tools like **Maven**, *
 - Automates the provisioning and management of infrastructure using tools like **Terraform** or **Ansible**.
 - Ensures consistency across environments and reduces manual errors.
 
-### Stage 6. **Monitoring and Feedback**
+### Stage 5. **Monitoring and Feedback**
    - Once deployed, the application is monitored for performance and errors.
    - Tools like Prometheus, Grafana, or Datadog provide real-time insights.
 
