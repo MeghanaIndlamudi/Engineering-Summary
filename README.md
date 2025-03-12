@@ -28,4 +28,5 @@ This article provides a comprehensive guide to CI/CD pipelines, covering key sta
 
 # System Design-Library
 A collection of concise, high-quality summaries of system design concepts.
-## [Introduction to Distributed Systems](SystemDesign1:Distributedsystems.md)
+### [Introduction to Distributed Systems](SD-1-Distributed-Systems.md)
+### [Scalability: Horizontal vs. Vertical Scaling](SD-2-Scalability.md)
