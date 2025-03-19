@@ -30,3 +30,5 @@ This article provides a comprehensive guide to CI/CD pipelines, covering key sta
 A collection of concise, high-quality summaries of system design concepts.
 ### [Introduction to Distributed Systems](SD-1-Distributed-Systems.md)
 ### [Scalability: Horizontal vs. Vertical Scaling](SD-2-Scalability.md)
+### [Load Balancing](SD-3-Load-Balancing.md)
+### [Database Sharding](SD-4-Database-Sharding.md)
